@@ -70,7 +70,7 @@ concurrency:
 
 jobs:
   build:
-    name: 
+    name:
     runs-on: macos-latest
     permissions:
       contents: write
@@ -318,7 +318,70 @@ jobs:
           tag_name: ytp-beta-${{ github.run_number }}
           name: YouTubePlus Beta (${{ github.run_number }})
           files: YouTubePlus_Beta.ipa
-          draft: true
+          draft: false
+          prerelease: true
+          body: |
+            # YouTube Plus Beta Build
+
+            ## ⚠️ Beta Release
+
+            This is a **beta build** using a custom YouTube Plus tweak URL. It may contain experimental features or bug fixes.
+
+            ## 🎉 Build Information
+
+            - **Build Number**: ${{ github.run_number }}
+            - **Build Date**: ${{ github.event.repository.updated_at }}
+            - **Tweak URL**: Custom (provided at build time)
+
+            ## ✨ What's Included
+
+            This IPA includes:
+            - YouTube Plus (beta version from custom URL)
+            - Open in YouTube (Safari extension)
+            - **Integrations**: ${{ inputs.enable_youpip && '✅ YouPiP' || '' }} ${{ inputs.enable_ytuhd && '✅ YTUHD' || '' }} ${{ inputs.enable_yq && '✅ YouQuality' || '' }} ${{ inputs.enable_ryd && '✅ Return YouTube Dislikes' || '' }} ${{ inputs.enable_demc && '✅ DontEatMyContent' || '' }}
+
+            ## 📦 Installation
+
+            ### For Sideloading (Non-Jailbroken)
+            1. Download the IPA from this release
+            2. Use AltStore, SideStore, or similar tools to sideload
+            3. Trust the certificate in Settings > General > VPN & Device Management
+            4. Open YouTube and test the beta features!
+
+            ## 🐛 Testing & Feedback
+
+            As this is a beta build:
+            - Please test thoroughly before daily use
+            - Report any issues on GitHub: https://github.com/${{ github.repository }}/issues
+            - Include "BETA" in your issue title
+            - Provide detailed steps to reproduce any bugs
+
+            ## 🔍 Finding Preferences
+
+            After installation, YouTube Plus preferences are in: **YouTube App > Settings > YouTube Plus**
+
+            ## 📖 Documentation
+
+            - [README](https://github.com/${{ github.repository }}/blob/main/README.md)
+            - [FAQ (English)](https://github.com/${{ github.repository }}/blob/main/FAQs/FAQ_EN.md)
+            - [Build Instructions](https://github.com/${{ github.repository }}#how-to-build-a-youtube-plus-app-using-github-actions)
+
+            ## ⚠️ Important
+
+            - This is a **BETA** build - use with caution
+            - May contain experimental features or bugs
+            - Not recommended for production use
+            - Respect YouTube's Terms of Service
+
+            ## 🙏 Credits
+
+            - **Main Developer**: dvntm (dayanch96)
+            - **Integration Developers**: PoomSmart, therealFoxster
+            - See app's Contributors section for full credits
+
+            ---
+
+            **Found a bug?** Report it on [GitHub Issues](https://github.com/${{ github.repository }}/issues) with the "BETA" tag!
 
       - name: Output Release URL
         run: |
