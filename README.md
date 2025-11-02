@@ -3,6 +3,7 @@ A flexible enhancer for YouTube on iOS, featuring over hundred customizable opti
 
 ## Table of Contents
 - [Screenshots](#screenshots)
+- [Download](#download)
 - [Main Features](#main-features)
 - [FAQ](#faq)
 - [Reviews](#reviews)
@@ -34,6 +35,11 @@ A flexible enhancer for YouTube on iOS, featuring over hundred customizable opti
     </tr>
   </table>
 </details>
+
+## Download
+Ready-to-use IPA files are available in the [Releases](https://github.com/nonokh/YTLite/releases) section of this repository.
+
+Visit [https://github.com/nonokh/YTLite/releases](https://github.com/nonokh/YTLite/releases) to download the latest YouTube Plus IPA file.
 
 ## Main Features
 <li>Download videos, audio (including audio track selection), thumbnails, posts, and profile pictures</li>
