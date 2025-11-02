@@ -70,7 +70,7 @@ concurrency:
 
 jobs:
   build:
-    name: 
+    name:
     runs-on: macos-latest
     permissions:
       contents: write
@@ -345,72 +345,72 @@ jobs:
           draft: false
           body: |
             # YouTube Plus v${{ inputs.tweak_version }} (cyan/TrollStore/TrollFools)
-            
+
             ## 🎉 Build Information
-            
+
             - **YouTube Plus Version**: ${{ inputs.tweak_version }}
             - **Build Number**: ${{ github.run_number }}
             - **Build Date**: ${{ github.event.repository.updated_at }}
             - **Build Type**: ${{ inputs.create_cyan && 'cyan' || '' }} ${{ inputs.create_tf && 'TrollFools' || '' }}
-            
+
             ## ✨ What's Included
-            
+
             This release includes:
             - YouTube Plus v${{ inputs.tweak_version }}
             - Open in YouTube (Safari extension)
             - **Integrations**: ${{ inputs.enable_youpip && '✅ YouPiP' || '' }} ${{ inputs.enable_ytuhd && '✅ YTUHD' || '' }} ${{ inputs.enable_yq && '✅ YouQuality' || '' }} ${{ inputs.enable_ryd && '✅ Return YouTube Dislikes' || '' }} ${{ inputs.enable_demc && '✅ DontEatMyContent' || '' }}
-            
+
             ## 📦 Installation Options
-            
+
             This release provides multiple installation formats:
-            
+
             ### For cyan (TrollStore/TrollFools)
             ${{ inputs.create_cyan && '✅ `cyan_YouTubePlus_*.cyan` - Install using cyan tool' || '' }}
-            
+
             ### For TrollFools
             ${{ inputs.create_tf && '✅ `TrollFools_YouTubePlus_*.zip` - Extract and inject with TrollFools' || '' }}
-            
+
             ## 🚀 Installation Steps
-            
+
             ### Using cyan with TrollStore
             1. Download the `.cyan` file
             2. Open TrollStore
             3. Install the cyan file
             4. Open YouTube and enjoy!
-            
+
             ### Using TrollFools
             1. Download the `.zip` file
             2. Extract the contents
             3. Use TrollFools to inject into YouTube
             4. Follow TrollFools instructions
-            
+
             ## 🔍 Finding Preferences
-            
+
             After installation, YouTube Plus preferences are in: **YouTube App > Settings > YouTube Plus**
-            
+
             ## 📖 Documentation
-            
+
             - [README](https://github.com/${{ github.repository }}/blob/main/README.md)
             - [FAQ (English)](https://github.com/${{ github.repository }}/blob/main/FAQs/FAQ_EN.md)
             - [Build Instructions](https://github.com/${{ github.repository }}#how-to-build-a-youtube-plus-app-using-github-actions)
             - [Full Changelog](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md)
-            
+
             ## ⚠️ Important
-            
+
             - This is a modified YouTube app. Use at your own risk.
             - TrollStore/TrollFools required for this installation method
             - Respect YouTube's Terms of Service
             - Report issues: https://github.com/${{ github.repository }}/issues
-            
+
             ## 🙏 Credits
-            
+
             - **Main Developer**: dvntm (dayanch96)
             - **Integration Developers**: PoomSmart, therealFoxster
             - **Tools**: cyan, TrollStore, TrollFools developers
             - See app's Contributors section for full credits
-            
+
             ---
-            
+
             **Need Help?** Check the [FAQ](https://github.com/${{ github.repository }}/blob/main/FAQs/FAQ_EN.md) or open an issue!
 
       - name: Output Release URL
