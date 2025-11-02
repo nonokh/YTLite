@@ -9,6 +9,7 @@ A flexible enhancer for YouTube on iOS, featuring over hundred customizable opti
 - [How to build a YouTube Plus app using GitHub Actions](#how-to-build-a-youtube-plus-app-using-github-actions)
 - [Supported YouTube Version](#supported-youtube-version)
 - [Tweak Integration Details](#tweak-integration-details)
+- [Changelog](#changelog)
 
 ## Screenshots
 <table>
@@ -143,3 +144,14 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
   <p><strong>DontEatMyContent preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
   <p>Source code and additional information are available <a href="https://github.com/therealFoxster/DontEatMyContent">in therealFoxster's GitHub repository</a>.</p>
 </details>
+
+## Changelog
+
+For detailed version history, release notes, and changes between versions, see [CHANGELOG.md](CHANGELOG.md).
+
+### Latest Release
+- **Version**: 5.2 beta 3
+- **YouTube Compatibility**: 20.32.4
+- **Date**: August 11, 2024
+
+For all releases and pre-built IPAs, visit the [Releases page](https://github.com/nonokh/YTLite/releases).

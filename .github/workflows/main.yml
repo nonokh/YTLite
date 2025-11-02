@@ -313,7 +313,60 @@ jobs:
           tag_name: ytp-${{ github.run_number }}
           name: YouTubePlus v${{ inputs.tweak_version }} (${{ github.run_number }})
           files: YouTubePlus_${{ inputs.tweak_version }}.ipa
-          draft: true
+          draft: false
+          body: |
+            # YouTube Plus v${{ inputs.tweak_version }}
+            
+            ## 🎉 Build Information
+            
+            - **YouTube Plus Version**: ${{ inputs.tweak_version }}
+            - **Build Number**: ${{ github.run_number }}
+            - **Build Date**: ${{ github.event.repository.updated_at }}
+            
+            ## ✨ What's Included
+            
+            This IPA includes:
+            - YouTube Plus v${{ inputs.tweak_version }}
+            - Open in YouTube (Safari extension)
+            - **Integrations**: ${{ inputs.enable_youpip && '✅ YouPiP' || '' }} ${{ inputs.enable_ytuhd && '✅ YTUHD' || '' }} ${{ inputs.enable_yq && '✅ YouQuality' || '' }} ${{ inputs.enable_ryd && '✅ Return YouTube Dislikes' || '' }} ${{ inputs.enable_demc && '✅ DontEatMyContent' || '' }}
+            
+            ## 📦 Installation
+            
+            ### For Sideloading (Non-Jailbroken)
+            1. Download the IPA from this release
+            2. Use AltStore, SideStore, or similar tools to sideload
+            3. Trust the certificate in Settings > General > VPN & Device Management
+            4. Open YouTube and enjoy!
+            
+            ### For Jailbroken Devices
+            Install the tweak directly from source at https://github.com/dayanch96/YTLite
+            
+            ## 🔍 Finding Preferences
+            
+            After installation, YouTube Plus preferences are in: **YouTube App > Settings > YouTube Plus**
+            
+            ## 📖 Documentation
+            
+            - [README](https://github.com/${{ github.repository }}/blob/main/README.md)
+            - [FAQ (English)](https://github.com/${{ github.repository }}/blob/main/FAQs/FAQ_EN.md)
+            - [Build Instructions](https://github.com/${{ github.repository }}#how-to-build-a-youtube-plus-app-using-github-actions)
+            - [Full Changelog](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md)
+            
+            ## ⚠️ Important
+            
+            - This is a modified YouTube app. Use at your own risk.
+            - Respect YouTube's Terms of Service
+            - Report issues: https://github.com/${{ github.repository }}/issues
+            
+            ## 🙏 Credits
+            
+            - **Main Developer**: dvntm (dayanch96)
+            - **Integration Developers**: PoomSmart, therealFoxster
+            - See app's Contributors section for full credits
+            
+            ---
+            
+            **Need Help?** Check the [FAQ](https://github.com/${{ github.repository }}/blob/main/FAQs/FAQ_EN.md) or open an issue!
 
       - name: Output Release URL
         run: |
